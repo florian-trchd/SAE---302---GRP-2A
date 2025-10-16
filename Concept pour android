@@ -1,0 +1,37 @@
+Objective : Réaliser une application Android (≥ 2 activités) en Java qui communique 
+            avec le site web et visualise au minimum les failles.
+
+So your Android app must:
+	1.	Be coded in Java (not Kotlin).
+	2.	Contain at least 2 activities (screens).
+	3.	Communicate with your website (backend) using JSON data.
+	4.	Display at least the list of detected vulnerabilities that are stored in the database.
+
+Activity 1 — Main / Login / Menu Screen
+Purpose:
+	•	This is the entry point of the app.
+	•	It could be a menu or a login screen, depending on your design.
+
+Examples of what this activity could do:
+	•	Simple “Welcome” page with a button: “View Detected Vulnerabilities”.
+	•	Or, if you want to be more advanced, a login screen (username + password) to authenticate with the website.
+
+Activity 2 — Vulnerability List Screen
+Purpose:
+	•	Fetch and display the list of vulnerabilities from the website.
+
+Main features:
+	•	When opened, it sends an HTTP GET request to your website’s API endpoint (like https://yourserver/api/vulnerabilities).
+	•	Receives a JSON response.
+	•	Parses the JSON into Java objects.
+	•	Displays them in a RecyclerView (scrollable list).
+
+Activity 3 (Details Screen)
+•	When the user taps on one vulnerability in the list, it opens a new screen that shows detailed info.
+	•	It can show:
+	•	IP address
+	•	Description
+	•	Severity
+	•	Suggested fix
+•	You pass the data via an Intent.
+
